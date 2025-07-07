@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap');
+
+body {
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #ffdde1, #ee9ca7); /* สีพื้นหลังน่ารักๆ */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin: 20px;
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+header h1 {
+    color: #e91e63; /* สีน่ารัก */
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
+
+header h2 {
+    color: #f48fb1;
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+/* สไตล์สำหรับปุ่มเล่นเพลง */
+.music-button {
+    background-color: #ff6f91; /* สีน่ารัก */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 1.1em;
+    font-family: 'Kanit', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(255, 111, 145, 0.4);
+}
+
+.music-button:hover {
+    background-color: #e6005c;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 111, 145, 0.6);
+}
+
+.music-button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(255, 111, 145, 0.3);
+}
+
+.message p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.memories, .videos {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px dashed #f06292;
+}
+
+h3 {
+    color: #d81b60;
+    font-size: 2em;
+    margin-bottom: 25px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.05) rotate(2deg);
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.video-grid video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    background-color: #fce4ec; /* สีอ่อนๆ รองรับวิดีโอ */
+}
+
+footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ffebee;
+    color: #999;
+    font-size: 0.9em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px;
+    }
+    header h1 {
+        font-size: 2.5em;
+    }
+    header h2 {
+        font-size: 1.5em;
+    }
+    .message p {
+        font-size: 1em;
+    }
+    h3 {
+        font-size: 1.8em;
+    }
+    .music-button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+    .gallery {
+        grid-template-columns: 1fr; /* ให้รูปภาพเรียงกันในมือถือ */
+    }
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+}

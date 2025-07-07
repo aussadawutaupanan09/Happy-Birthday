@@ -49,32 +49,6 @@ header h2 {
     margin-bottom: 30px;
 }
 
-/* สไตล์สำหรับปุ่มเล่นเพลง */
-.music-button {
-    background-color: #ff6f91; /* สีน่ารัก */
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 30px;
-    font-size: 1.1em;
-    font-family: 'Kanit', sans-serif;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: 20px;
-    box-shadow: 0 5px 15px rgba(255, 111, 145, 0.4);
-}
-
-.music-button:hover {
-    background-color: #e6005c;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(255, 111, 145, 0.6);
-}
-
-.music-button:active {
-    transform: translateY(0);
-    box-shadow: 0 3px 10px rgba(255, 111, 145, 0.3);
-}
-
 .message p {
     font-size: 1.2em;
     line-height: 1.6;
@@ -116,7 +90,7 @@ h3 {
 
 .video-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    
     gap: 20px;
 }
 
@@ -125,7 +99,7 @@ h3 {
     height: auto;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-    image-rendering: auto;
+    background-image: #fce4ec; /* สีอ่อนๆ รองรับวิดีโอ */
 }
 
 footer {
@@ -152,10 +126,6 @@ footer {
     }
     h3 {
         font-size: 1.8em;
-    }
-    .music-button {
-        padding: 10px 20px;
-        font-size: 1em;
     }
 }
 

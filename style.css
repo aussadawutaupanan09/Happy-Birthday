@@ -90,7 +90,7 @@ h3 {
 
 .video-grid {
     display: grid;
-    
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
 }
 
@@ -99,7 +99,7 @@ h3 {
     height: auto;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-    background-image: #fce4ec; /* สีอ่อนๆ รองรับวิดีโอ */
+    background-i: #fce4ec; /* สีอ่อนๆ รองรับวิดีโอ */
 }
 
 footer {
